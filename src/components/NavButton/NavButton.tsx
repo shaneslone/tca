@@ -1,6 +1,6 @@
 import { ReactNode, useContext } from 'react';
 import { PostContext } from '../../App';
-import styles from './NaveButton.module.css';
+import styles from './NavButton.module.css';
 
 interface Props {
   url: string;

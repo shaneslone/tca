@@ -1,9 +1,8 @@
 import { createContext } from 'react';
 import './App.css';
-import PostNav from './components/PageNav/PostNav';
 import PostsList from './components/PostList/PostsList';
 import usePageinatedApi from './hooks/usePaginatedApi';
-import { Photo, Post, UsePaginatedApiData } from './types';
+import { Post, UsePaginatedApiData } from './types';
 
 const defaultState = {
   posts: [],
