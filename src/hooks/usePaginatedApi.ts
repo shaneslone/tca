@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { fetchDataFunction } from '../types';
 import { parseLinkHeader, Links } from '@web3-storage/parse-link-header';
+import { fixLinks } from '../utils/fixLinks';
 
 const usePageinatedApi = <T>(
   url: string,
@@ -11,8 +12,8 @@ const usePageinatedApi = <T>(
 
   const fetchData = async (url: string) => {
     const res = await fetch(url);
-    const links = res.headers.get('link');
-    if (links) setPages(parseLinkHeader(links));
+    const links = fixLinks(res.headers.get('link'));
+    setPages(parseLinkHeader(links));
     const data = await res.json();
     setData(data);
   };
