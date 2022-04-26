@@ -1,4 +1,4 @@
-import { Links } from 'parse-link-header';
+import { Links } from '@web3-storage/parse-link-header';
 
 export interface Post {
   userId: number;
