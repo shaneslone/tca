@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { fetchDataFunction } from '../types';
-import { parseLinkHeader, Links } from '@web3-storage/parse-link-header';
-import { fixLinks } from '../utils/fixLinks';
+import { Links, parseLinkHeader } from '@web3-storage/parse-link-header';
+import { fixLinks } from '../utils/fixLinks/fixLinks';
 
 const usePageinatedApi = <T>(
   url: string,
