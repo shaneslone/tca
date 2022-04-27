@@ -20,15 +20,19 @@ const postContext = {
   pages: {
     first: {
       url: 'https://test.com/next',
+      rel: 'first',
     },
     last: {
       url: 'https://test.com/last',
+      rel: 'last',
     },
     next: {
       url: 'https://test.com/next',
+      rel: 'next',
     },
     prev: {
       url: 'https://text.com/prev',
+      rel: 'prev',
     },
   },
   getPage: async (url: string) => {},
